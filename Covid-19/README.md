@@ -14,20 +14,20 @@
 - [7. Act](#7)
 
 <a name="1"></a>
-# 1.Summary
+# 1.Summary 📚
 Covid-19 is an infectious disease caused by the SAR-CoV-2 virus. Most people infected with this virus will experience mild to moderate respiratory illness, but some may become severely ill and require medical care. And anyone, at any age, can get sick, become seriously ill, and die.The disease first broke out at the end of 2019, and then spread rapidly to many countries around the world in 2020, gradually turning into a global pandemic.
 
 The focus of this case is to organize the raw data set and analyze the development trend of the new coronavirus and the later vaccine response measures in the whole world.
 
 <a name="2"></a>
-# 2. Ask
+# 2. Ask 🤔
 Identify trends in covid-19
 
 <a name="3"></a>
-# 3. Prepare
+# 3. Prepare 🌱
 
 <a name="3.1"></a>
-## 3.1 Dataset Used
+## 3.1 Dataset Used 
 The dataset used for this case study is Covid-19 deaths dataset. This dataset is from Our World in Data (OWID), which is a scientific online publication that focus on large global problems such as poverty, disease, hunger, climate change, was, existential rishs, and inequality.
 
 <a name="3.2"></a>
@@ -51,3 +51,5 @@ The dataset for this case study is a CSV file. The data is considered long since
 <a name="3.5"></a>
 ## 3.5 Data credibility and intergrity
 The reliability and completeness of this database are relatively high, except for some countries or regions where data is missing or updated at different times than others (data for most countries is updated daily). This can be. It may cause the analysis results or the process of virus spread to have slightly deviated from the real results, but overall this is a very complete dataset.
+
+

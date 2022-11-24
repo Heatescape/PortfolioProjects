@@ -1,12 +1,12 @@
 ## Table of Contents
 
 
-- [1. Sumamry](#section_name)<a name="section_name"></a>
+- [1. Sumamry](# 1. Summary)
 - [2. Ask](#section_name)<a name="section_name"></a>
 - [3. Prepare](#section_name)<a name="section_name"></a>
   - [3.1 Dataset used](#section_name)<a name="section_name"></a>
   - [3.2 Accessibility and privacy of data](#section_name)<a name="section_name"></a>
-  - [3.3 Information about dataset](#section_name)<a name="section_name"></a>
+  - [3.3 Information about dataset](#3.3 Information about dataset)
   - [3.4 Data organization and verification](#section_name)<a name="section_name"></a>
   - [3.5 Data credibility and intergrity](#section_name)<a name="section_name"></a>
 - [4. Process](#section_name)<a name="section_name"></a>

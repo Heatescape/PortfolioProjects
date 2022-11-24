@@ -12,7 +12,7 @@
 - [4. Process](#section_name)<a name="section_name"></a>
 - [5. Analyse](#section_name)<a name="section_name"></a>
 - [6. Share](#section_name)<a name="section_name"></a>
-- [7. Act](#section_name)<a name="section_name"></a>
+- [7. Act](#section_name)<a name="Act"></a>
 
 # 1. Summary
 Covid-19 is an infectious disease caused by the SAR-CoV-2 virus. Most people infected with this virus will experience mild to moderate respiratory illness, but some may become severely ill and require medical care. And anyone, at any age, can get sick, become seriously ill, and die.The disease first broke out at the end of 2019, and then spread rapidly to many countries around the world in 2020, gradually turning into a global pandemic.

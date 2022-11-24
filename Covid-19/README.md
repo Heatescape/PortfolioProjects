@@ -37,3 +37,17 @@ We can determine from the source website of the data, OWID, that this is an open
 <a name="3.3"></a>
 ## 3.3 Information about dataset
 This dataset records data about the Covid-19 from February 4, 2020 to the present. This dataset was provided to OWID by experts in the field Edouard Mathieu, Hannah Ritchie, Lucas Rodés-Guirao, Cameron Appel, Daniel Gavrilov, Charlie Giattino, Joe Hasell, Bobbie Macdonald, Saloni Dattani, Diana Beltekian, Esteban Ortiz-Ospina, and Max Roser organization and it is updated daily.
+
+<a name="3.4"></a>
+## 3.4 Data organization and verification
+The dataset for this case study is a CSV file. The data is considered long since each row is one time point per country or area, hence, each country or are will have data in multiple rows. Then, the dataset has been separeated in to two files, Deaths and Vaccine, for the convenience of exploring their individual trends.
+
+| Table Name | Type | Description | Columns Example |
+| --- | --- | --- | --- |
+| CovidDeaths | xlsx | Data of deaths due to Covid-19 globally | Location, Date, Population, Cases, Deaths |
+| CovidVaccinations | xlsx | Data of vaccinations of Covid-19 globally | Location, Date, Population, Vaccinations |
+| CovidData | xlsx | Combination of above two |  |
+
+<a name="3.5"></a>
+## 3.5 Data credibility and intergrity
+The reliability and completeness of this database are relatively high, except for some countries or regions where data is missing or updated at different times than others (data for most countries is updated daily). This can be. It may cause the analysis results or the process of virus spread to have slightly deviated from the real results, but overall this is a very complete dataset.

@@ -47,8 +47,10 @@ group by location
 order by 2 desc 
 
 -- list top 5 countries have highest death rate
-select top 5 location, max(total_deaths) as highest_death_count, population, max(total_deaths)/population * 100 as death_percentage
+select top 5 location, max(total_deaths) as highest_death_count, max(total_cases), max(total_deaths)/max(total_cases) * 100 as death_percentage
 from Covid..deathsInCountry$
+where total_cases <> 0
+and location <> 'North Korea'
 group by location, population
 order by 4 desc
 

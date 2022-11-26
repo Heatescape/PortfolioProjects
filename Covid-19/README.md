@@ -9,8 +9,15 @@
   - [3.4 Data organization and verification](#3.4)
   - [3.5 Data credibility and intergrity](#3.5)
 - [4. Process](#4)
+  - [4.1 Import dataset](#4.1)
+  - [4.2 Data cleaning](#4.2)
 - [5. Analyse and Share](#5)
-- [6. Act](#6)
+  - [5.1 Global numbers](#5.1)
+  - [5.2 Determining the severity of the virus](#5.2)
+  - [5.3 The country has the most infected people](#5.3)
+  - [5.4 Top 5 countries have highest death rate](#5.4)
+  - [5.5 In Australia](#5.5)
+  
 
 <a name="1"></a>
 # 1.Summary 📚
@@ -51,14 +58,17 @@ The dataset for this case study is a CSV file. The data is considered long since
 ## 3.5 Data credibility and intergrity
 The reliability and completeness of this database are relatively high, except for some countries or regions where data is missing or updated at different times than others (data for most countries is updated daily). This can be. It may cause the analysis results or the process of virus spread to have slightly deviated from the real results, but overall this is a very complete dataset.
 
-# 4. Process
+<a name="4"></a>
+# 4. Process📽
 In this case study, Microsoft SQL Server is used for data clearning and make view for visuallsation in tableau.
 
+<a name="4.1"></a>
 ## 4.1 Import dataset
 Load two xlsx files in to MS SQL Server
 
 ![plot](./SQL_Query/img/tables.PNG)
 
+<a name="4.2"></a>
 ## 4.2 Data cleaning
 ### 4.2.1 Check duplicates
 https://github.com/Heatescape/PortfolioProjects/blob/6a6e0e5bb5b12abc858750f3409d3626ab671df5/Covid-19/SQL_Query/DataCleaning.sql#L6-L9
@@ -80,6 +90,12 @@ Result:
 By filtering rows that have continent value of null, we can tell that this is different type of separation other then country.
 
 ![plot](./SQL_Query/img/conti.PNG)
+
+To in case I did not miss some "real nulls", I checked null values of total_cases and total_deaths after November 2022.
+
+https://github.com/Heatescape/PortfolioProjects/blob/811d87250188c9e7366ac4b75e0aede941b49816/Covid-19/SQL_Query/cleaning.sql#L18-L22
+
+The output are mainly from Grate Britain, and North Korea. It causes confuse and by further research, Britain does have covid badly. Hence I decided to filter out information from those areas.
 
 ### 4.2.3 Data format
 
@@ -109,8 +125,10 @@ https://github.com/Heatescape/PortfolioProjects/blob/6a6e0e5bb5b12abc858750f3409
 
 ![plot](./SQL_Query/img/intab.PNG)
 
-# 5. Analyse
+<a name="5"></a>
+# 5. Analyse🔬
 
+<a name="5.1"></a>
 ## 5.1 Global numbers
 https://github.com/Heatescape/PortfolioProjects/blob/4737c604d011c5f4b72702fd579cec4af4784052/Covid-19/SQL_Query/Analyse.sql#L56-L58
 
@@ -118,6 +136,7 @@ Until 02/11/2022, there are 640 million Covid-19 cases around the world and caus
 
 ![plot](./SQL_Query/img/global.PNG)
 
+<a name="5.2"></a>
 ## 5.2 Determining the severity of the virus
 
 ### 5.2.1 Based on the infected percentage in country
@@ -134,6 +153,7 @@ Europe is the continent that has the highest infected rate of 31.76%, Oceania is
 
 ![plot](./SQL_Query/img/continent1.PNG)
 
+<a name="5.3"></a>
 ### 5.3 The country has the most infected people
 https://github.com/Heatescape/PortfolioProjects/blob/4737c604d011c5f4b72702fd579cec4af4784052/Covid-19/SQL_Query/Analyse.sql#L44-L47
 
@@ -141,6 +161,7 @@ The United States has 97.6 million people infected by Covid-19, which is the cou
 
 ![plot](./SQL_Query/img/infectpeople.PNG)
 
+<a name="5.4"></a>
 ### 5.4 Top 5 countries have highest death rate
 https://github.com/Heatescape/PortfolioProjects/blob/4737c604d011c5f4b72702fd579cec4af4784052/Covid-19/SQL_Query/Analyse.sql#L50-L53
 
@@ -148,6 +169,7 @@ Yemen has the highest death rate of approximately 18% following by Sudan, Syria,
 
 ![plot](./SQL_Query/img/deathrate.PNG)
 
+<a name="5.5"></a>
 ### 5.5 In Australia
 
 #### 5.5.1 Total cases and deaths since Covid-19 began
@@ -162,6 +184,11 @@ This image shows the daily number of new infections and deaths in Australia sinc
 
 ![plot](./SQL_Query/img/aus1.PNG)
 
+#### 5.5.3 Vaccination progress
+
+This image shows a graph of daily new infections and new vaccines during covid-19 in Australia. It can be seen from the picture that from March 2021, Australians have started to vaccinate. Until the end of 2021, every Australian has received one dose of vaccine on average. In Australia, after receiving the first dose of vaccine, people will receive a text message about three months later that they can continue to receive the second dose of vaccine. As the picture shows, in February 2022, Australia ushered in the first Two vaccination peaks. Up to 350 thousand doses of vaccine per day. Then in April 2022, the number of vaccinations per capita in Australia will reach 2. The final value will be more than two. I think there may be two reasons. First, in Australia, no matter whether they are Australian citizens, they have the right to be vaccinated, so some overseas personnel have also been vaccinated in Australia (such as myself), and second, Australia has recently begun to send out the third dose of vaccine news, but it may be because people's vigilance against covid-19 has declined, so not many people go to get the third dose.
+
+![plot](./SQL_Query/img/vpc.PNG)
 
 
 

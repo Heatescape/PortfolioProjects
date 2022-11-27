@@ -18,6 +18,7 @@
   - [5.4 Top 5 countries have highest death rate](#5.4)
   - [5.5 In Australia](#5.5)
   
+<br />
 
 <a name="1"></a>
 # 1.Summary 📚
@@ -25,9 +26,13 @@ Covid-19 is an infectious disease caused by the SAR-CoV-2 virus. Most people inf
 
 The focus of this case is to organize the raw data set and analyze the development trend of the new coronavirus and the later vaccine response measures in the whole world.
 
+<br />
+
 <a name="2"></a>
 # 2. Ask 🤔
 Identify trends in covid-19
+
+<br />
 
 <a name="3"></a>
 # 3. Prepare 🌱
@@ -57,6 +62,8 @@ The dataset for this case study is a CSV file. The data is considered long since
 <a name="3.5"></a>
 ## 3.5 Data credibility and intergrity
 The reliability and completeness of this database are relatively high, except for some countries or regions where data is missing or updated at different times than others (data for most countries is updated daily). This can be. It may cause the analysis results or the process of virus spread to have slightly deviated from the real results, but overall this is a very complete dataset.
+
+<br />
 
 <a name="4"></a>
 # 4. Process📽
@@ -124,6 +131,8 @@ https://github.com/Heatescape/PortfolioProjects/blob/6a6e0e5bb5b12abc858750f3409
 https://github.com/Heatescape/PortfolioProjects/blob/6a6e0e5bb5b12abc858750f3409d3626ab671df5/Covid-19/SQL_Query/DataCleaning.sql#L30-L34
 
 ![plot](./SQL_Query/img/intab.PNG)
+
+<br />
 
 <a name="5"></a>
 # 5. Analyse🔬

@@ -24,7 +24,7 @@ Leaf is Bellabeat's classic wellness tracker can be worn as a bracelet, necklace
 - <strong>Bellabeat marketing analytics team</strong>: A team of data analysts responsible for collecting, analyzing, and reporting data that helps guide Bellabeat’s marketing strategy. You joined this team six months ago and have been busy learning about Bellabeat’’s mission and business goals — as well as how you, as a junior data analyst, can help Bellabeat achieve them.
 <br />
 
-# 3. Prepare
+# 3. Prepare 🎨
 ## 3.1 Dataset used
 The dataset used for this case study is FitBit Fitness Tracker Data from Mobius on Kaggle.
 
@@ -43,28 +43,39 @@ There are 18 CSV files in the dataset. Each file contains different data tracked
 | dailyCalories_merged           | XLSX | 33              | 31           | Tracking daily: calories.                                                                           |
 | dailyIntensities_merged        | XLSX | 33              | 31           | Tracking daily: time and distance of sedentary, lightly activity, fairly active, very active state. |
 | dailySteps_merged              | XLSX | 33              | 31           | Traking daily: steps.                                                                               |
-| heartrate_seconds_merged       | XLSX | 7               | 13           | Tracking: heart rate every 10 to 15 secends.                                                        |
-| hourlyCalories_merged          | XLSX | 33              | 13           | Tracking hourly: calories.                                                                          |
-| hourlyIntensities_merged       | XLSX | 33              | 13           | Tracking hourly: intensity.                                                                         |
-| hourlySteps_merged             | XLSX | 33              | 13           | Tracking hourly: steps.                                                                             |
-| minuteCaloriesNarrow_merged    | XLSX | 27              | 13           | Tracking minutely: calories. Each row is a minute.                                                  |
-| minuteCaloriesWide_merged      | XLSX | 33              | ???          | Tracking minutely: calories. Each row is an hour, and 60 columns for each minute.                   |
-| minuteIntensitiesNarrow_merged | XLSX | 27              | 13           | Tracking minutely: intensity. Each row is a minute.                                                 |
-| minuteIntensitiesWide_merged   | XLSX | 33              | ???          | Tracking minutely: intensity. Each row is an hour, and 60 columns for each minute.                  |
-| minuteMETsNarrow_merged        | XLSX | 27              | 13           | Tracking minutely: metabolic equivalent.                                                            |
-| minuteSleep_merged             | XLSX | 24              | 14           | Tracking minutely: value indicating the sleep state. 1 = asleep, 2 = restless, 3 = awake, and logId |
-| minuteStepsNarrow_merged       | XLSX | 27              | 13           | Tracking minutely: steps.                                                                           |
-| minuteStepsWide_merged         | XLSX | 33              | ???          | Tracking minutely: steps. Each row is an hour, and 60 columns for each minute.                      |
-| sleepDay_merged                | XLSX | 24              | ???          | Tracking daily: total sleep records, minutes asleep, time in bed.                                   |
-| weightLogInfo_merged           | XLSX | 8               | ???          | Tracking daily: weight, body fat percent, BMI, report type, logId.                                  |
+| heartrate_seconds_merged       | XLSX | 7               | 31          | Tracking: heart rate every 10 to 15 secends.                                                        |
+| hourlyCalories_merged          | XLSX | 33              | 31           | Tracking hourly: calories.                                                                          |
+| hourlyIntensities_merged       | XLSX | 33              | 31           | Tracking hourly: intensity.                                                                         |
+| hourlySteps_merged             | XLSX | 33              | 31           | Tracking hourly: steps.                                                                             |
+| minuteCaloriesNarrow_merged    | XLSX | 27              | 31          | Tracking minutely: calories. Each row is a minute.                                                  |
+| minuteCaloriesWide_merged      | XLSX | 33              | 31         | Tracking minutely: calories. Each row is an hour, and 60 columns for each minute.                   |
+| minuteIntensitiesNarrow_merged | XLSX | 27              | 31          | Tracking minutely: intensity. Each row is a minute.                                                 |
+| minuteIntensitiesWide_merged   | XLSX | 33              | 31          | Tracking minutely: intensity. Each row is an hour, and 60 columns for each minute.                  |
+| minuteMETsNarrow_merged        | XLSX | 27              | 31           | Tracking minutely: metabolic equivalent.                                                            |
+| minuteSleep_merged             | XLSX | 24              | 31          | Tracking minutely: value indicating the sleep state. 1 = asleep, 2 = restless, 3 = awake, and logId |
+| minuteStepsNarrow_merged       | XLSX | 27              | 31           | Tracking minutely: steps.                                                                           |
+| minuteStepsWide_merged         | XLSX | 33              | 31       | Tracking minutely: steps. Each row is an hour, and 60 columns for each minute.                      |
+| sleepDay_merged                | XLSX | 24              | 31          | Tracking daily: total sleep records, minutes asleep, time in bed.                                   |
+| weightLogInfo_merged           | XLSX | 8               | 31         | Tracking daily: weight, body fat percent, BMI, report type, logId.                                  |
 
 
 <br />
 
+## 3.5 Data credibility and intergrity
+Since this set of data comes from a maximum of 33 users, we may run into sampling bias issues, and we are not sure that the samples in the data are representative of the entire general population. Another problem is that this set of data is basically based on one month's data. We can imagine a scenario where, say in winter, people find it difficult (for some) to get up early because of the low temperatures. During summer, we may (for some) become less active due to warmer temperatures, so time period constraints may also lead to gaps in our analysis results from the general truth.
 
+# 4 Process 🛠
+For this case study, I will use Microsoft excel and Microsoft SQL server to cleaning, analyse data. Then, create data visulasation using tableau to share my insight learnt from dataset to the stakeholders.
 
+## 4.1 Import dataset
+First, I convert CSV file to XLSX file to suit the import requirement of MS SQL server. 
 
+## 4.2 Cleaning and formatting
 
+### 4.2.1 Date formatting
+For some reason, there is a part of date format over 18 files are string, which can cause a lot misleading. The image shows almost what is happen in all files. The top three rows are the date in the correct format, they could be transfer of format to different date type. However, the bottom 5 are in the text string format, which make them unconvertable. Because of the AM/PM at the end, function "Text to Columns" cannot recognize the cell. Hence, I separete them in to date and time, then convert them and combine the converted date and time to fix the date format issue.
+
+### 4.2.2 Duplicates handelling
 
 
 

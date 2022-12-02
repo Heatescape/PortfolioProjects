@@ -10,7 +10,12 @@
 # 1. Summary 🎈
 Bellabeat, a high-tech manufacturer of health-focused products for women. Bellabeat is a successful small company, but they have the potential to become a larger player in the global smart device market. In this case study, I will focus on a single Bellabeat's product, <strong>Leaf</strong>,  and analyse the smart device dataset to gain insight into how consumers are using their smart devices.
 
-Leaf is Bellabeat's classic wellness tracker can be worn as a bracelet, necklace, or clip. The Leaf tracker connects to the Bellabeat app to track activity, sleep, and stress.
+Leaf is Bellabeat's classic wellness tracker can be worn as a bracelet, necklace, or clip. The Leaf tracker connects to the Bellabeat app and has features:
+- Tracks user's activity, and send reminders.
+- Tracks user's menstrual cycle.
+- Tracks user's meditations and sleep habits.
+- Tracks user's stress resistance.
+
 <br />
 
 # 2. Ask 🔍
@@ -77,10 +82,17 @@ For some reason, there is a part of date format over 18 files are string, which 
 
 ### 4.2.2 Duplicates handelling
 In this case study, I considered that a file has more than 1 record when the id and datetime is the same is duplicated. There are 2 files with duplicates. The first one is minuteSleep_merged file, user id 4702921684's information has been collected twice, this may because that this user have two deviced that record he/her stats at the same time. Hence, we created a new file minuteSleep_new_merged which maintain only non-duplicate record. The second file is sleepDay_merged, there are three records has been showns twice in the dataset, I filtered them out by creating a new file sleepDay_merged.
+<br />
+
+There are two columns in dailyActivity_merged dataset, TotalDistance and TrackerDistance. According to the fitabase data dictionary, TotalDistance is the total kilometres tracked (assume this is provide by the user's non-fitbit device, e.g. phone), TrackerDistance is the total kilometres tracked by Fitbit device. By checking the repeatability of these two column, there are only three record that have different value of TotalDistance and TrackerDistance, and the TotalDistance are always greater than the TrackerDistance. At the end, I droped the TotalDistance columns for a more compact dataset.
 
 ### 4.2.3 Removing nessesery data
 In the dataset, there are two different ways of recording calories, intensity and steps in minute. They were called "wide" and "narrow". However, they are basicly holding the same data, the only differece is the data structure (as the table in 3.4 shown). Hence, I deviced to keep all the "narrow" dataset, and drop all the "wide" dataset.
 
+### 4.2.4 Heart Rate dataset
+heartrate_seconds_merged dataset with three attribute: id, date (accurate to the second) and value, and totally 1.04 million rows. It contains the users' heart rate in seconds, however, all other dataset are measured in minutes or hours or days. There is no point to be that accuracte for this case study. Hence, I create another file heartrate_minutes_merged to with the users' heart rate in minutes, and take the average of heart rate in a minute to calculate the new heart rate value. There are two main reason of this process:
+- Decrease the data size from 1.04 million rows to 121 hundred rows.
+- Able to combine with other dataset easily.
 <br />
 
 # 5. Analyse 🔮

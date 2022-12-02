@@ -8,7 +8,7 @@
 <br />
 
 # 1. Summary 🎈
-Bellabeat, a high-tech manufacturer of health-focused products for women. Bellabeat is a successful small company, but they have the potential to become a larger player in the global smart device market. In this case study, I will focus on a single Bellabeat's product, Leaf,  and analyse the smart device dataset to gain insight into how consumers are using their smart devices.
+Bellabeat, a high-tech manufacturer of health-focused products for women. Bellabeat is a successful small company, but they have the potential to become a larger player in the global smart device market. In this case study, I will focus on a single Bellabeat's product, <strong>Leaf</strong>,  and analyse the smart device dataset to gain insight into how consumers are using their smart devices.
 
 Leaf is Bellabeat's classic wellness tracker can be worn as a bracelet, necklace, or clip. The Leaf tracker connects to the Bellabeat app to track activity, sleep, and stress.
 <br />
@@ -76,6 +76,15 @@ First, I convert CSV file to XLSX file to suit the import requirement of MS SQL 
 For some reason, there is a part of date format over 18 files are string, which can cause a lot misleading. The image shows almost what is happen in all files. The top three rows are the date in the correct format, they could be transfer of format to different date type. However, the bottom 5 are in the text string format, which make them unconvertable. Because of the AM/PM at the end, function "Text to Columns" cannot recognize the cell. Hence, I separete them in to date and time, then convert them and combine the converted date and time to fix the date format issue.
 
 ### 4.2.2 Duplicates handelling
+In this case study, I considered that a file has more than 1 record when the id and datetime is the same is duplicated. There are 2 files with duplicates. The first one is minuteSleep_merged file, user id 4702921684's information has been collected twice, this may because that this user have two deviced that record he/her stats at the same time. Hence, we created a new file minuteSleep_new_merged which maintain only non-duplicate record. The second file is sleepDay_merged, there are three records has been showns twice in the dataset, I filtered them out by creating a new file sleepDay_merged.
+
+### 4.2.3 Removing nessesery data
+In the dataset, there are two different ways of recording calories, intensity and steps in minute. They were called "wide" and "narrow". However, they are basicly holding the same data, the only differece is the data structure (as the table in 3.4 shown). Hence, I deviced to keep all the "narrow" dataset, and drop all the "wide" dataset.
+
+<br />
+
+# 5. Analyse 🔮
+
 
 
 

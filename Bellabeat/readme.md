@@ -44,24 +44,24 @@ There are 18 CSV files in the dataset. Each file contains different data tracked
 
 | Table Name                         | Type | Number of Users | Duration/day | Description                                                                                         |
 |--------------------------------|------|-----------------|--------------|-----------------------------------------------------------------------------------------------------|
-| dailyActivity_merged           | XLSX | 33              | 31           | Tracking daily: steps, distance, intensity, and calories.                                           |
-| dailyCalories_merged           | XLSX | 33              | 31           | Tracking daily: calories.                                                                           |
-| dailyIntensities_merged        | XLSX | 33              | 31           | Tracking daily: time and distance of sedentary, lightly activity, fairly active, very active state. |
-| dailySteps_merged              | XLSX | 33              | 31           | Traking daily: steps.                                                                               |
-| heartrate_seconds_merged       | XLSX | 7               | 31          | Tracking: heart rate every 10 to 15 secends.                                                        |
-| hourlyCalories_merged          | XLSX | 33              | 31           | Tracking hourly: calories.                                                                          |
-| hourlyIntensities_merged       | XLSX | 33              | 31           | Tracking hourly: intensity.                                                                         |
-| hourlySteps_merged             | XLSX | 33              | 31           | Tracking hourly: steps.                                                                             |
-| minuteCaloriesNarrow_merged    | XLSX | 27              | 31          | Tracking minutely: calories. Each row is a minute.                                                  |
-| minuteCaloriesWide_merged      | XLSX | 33              | 31         | Tracking minutely: calories. Each row is an hour, and 60 columns for each minute.                   |
-| minuteIntensitiesNarrow_merged | XLSX | 27              | 31          | Tracking minutely: intensity. Each row is a minute.                                                 |
-| minuteIntensitiesWide_merged   | XLSX | 33              | 31          | Tracking minutely: intensity. Each row is an hour, and 60 columns for each minute.                  |
-| minuteMETsNarrow_merged        | XLSX | 27              | 31           | Tracking minutely: metabolic equivalent.                                                            |
-| minuteSleep_merged             | XLSX | 24              | 31          | Tracking minutely: value indicating the sleep state. 1 = asleep, 2 = restless, 3 = awake, and logId |
-| minuteStepsNarrow_merged       | XLSX | 27              | 31           | Tracking minutely: steps.                                                                           |
-| minuteStepsWide_merged         | XLSX | 33              | 31       | Tracking minutely: steps. Each row is an hour, and 60 columns for each minute.                      |
-| sleepDay_merged                | XLSX | 24              | 31          | Tracking daily: total sleep records, minutes asleep, time in bed.                                   |
-| weightLogInfo_merged           | XLSX | 8               | 31         | Tracking daily: weight, body fat percent, BMI, report type, logId.                                  |
+| dailyActivity_merged           | CSV | 33              | 31           | Tracking daily: steps, distance, intensity, and calories.                                           |
+| dailyCalories_merged           | CSV | 33              | 31           | Tracking daily: calories.                                                                           |
+| dailyIntensities_merged        | CSV | 33              | 31           | Tracking daily: time and distance of sedentary, lightly activity, fairly active, very active state. |
+| dailySteps_merged              | CSV | 33              | 31           | Traking daily: steps.                                                                               |
+| heartrate_seconds_merged       | CSV | 7               | 31          | Tracking: heart rate every 10 to 15 secends.                                                        |
+| hourlyCalories_merged          | CSV | 33              | 31           | Tracking hourly: calories.                                                                          |
+| hourlyIntensities_merged       | CSV | 33              | 31           | Tracking hourly: intensity.                                                                         |
+| hourlySteps_merged             | CSV | 33              | 31           | Tracking hourly: steps.                                                                             |
+| minuteCaloriesNarrow_merged    | CSV | 27              | 31          | Tracking minutely: calories. Each row is a minute.                                                  |
+| minuteCaloriesWide_merged      | CSV | 33              | 31         | Tracking minutely: calories. Each row is an hour, and 60 columns for each minute.                   |
+| minuteIntensitiesNarrow_merged | CSV | 27              | 31          | Tracking minutely: intensity. Each row is a minute.                                                 |
+| minuteIntensitiesWide_merged   | CSV | 33              | 31          | Tracking minutely: intensity. Each row is an hour, and 60 columns for each minute.                  |
+| minuteMETsNarrow_merged        | CSV | 27              | 31           | Tracking minutely: metabolic equivalent.                                                            |
+| minuteSleep_merged             | CSV | 24              | 31          | Tracking minutely: value indicating the sleep state. 1 = asleep, 2 = restless, 3 = awake, and logId |
+| minuteStepsNarrow_merged       | CSV | 27              | 31           | Tracking minutely: steps.                                                                           |
+| minuteStepsWide_merged         | CSV | 33              | 31       | Tracking minutely: steps. Each row is an hour, and 60 columns for each minute.                      |
+| sleepDay_merged                | CSV | 24              | 31          | Tracking daily: total sleep records, minutes asleep, time in bed.                                   |
+| weightLogInfo_merged           | CSV | 8               | 31         | Tracking daily: weight, body fat percent, BMI, report type, logId.                                  |
 
 
 <br />

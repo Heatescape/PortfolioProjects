@@ -2,25 +2,25 @@
 - [1. Summary](#1)
 - [2. Ask](#2)
 - [3. Prepare](#3)
-  -[3.1 Dataset used](#3.1)
-  -[3.2 Accessibility and privacy of data](#3.2)
-  -[3.3 Information about dataset](#3.3)
-  -[3.4 Data Organizasion and verification](#3.4)
-  -[3.5 Data credibility and intergrity](#3.5)
+  - [3.1 Dataset used](#3.1)
+  - [3.2 Accessibility and privacy of data](#3.2)
+  - [3.3 Information about dataset](#3.3)
+  - [3.4 Data Organizasion and verification](#3.4)
+  - [3.5 Data credibility and intergrity](#3.5)
 - [4. Process](#4)
-  -[4.1 Import dataset](#4.1)
-  -[4.2 Cleaning and formatting](#4.2)
-    -[4.2.1 Date formatting](#4.2.1)
-    -[4.2.2 Duplicates handelling](#4.2.2)
-    -[4.2.3 Removing nessesery data](#4.2.3)
-    -[4.2.4 Heart Rate dataset](#4.2.4)
+  - [4.1 Import dataset](#4.1)
+  - [4.2 Cleaning and formatting](#4.2)
+    - [4.2.1 Date formatting](#4.2.1)
+    - [4.2.2 Duplicates handelling](#4.2.2)
+    - [4.2.3 Removing nessesery data](#4.2.3)
+    - [4.2.4 Heart Rate dataset](#4.2.4)
 - [5. Analyse and share](#5)
-  -[5.1 Device usage](#5.1)
-  -[5.2 Calories vs Sleeps vs Steps](#5.2)
-  -[5.3 Active level](#5.3)
-  -[5.4 Intensity in a day](#5.4)
-  -[5.5 Correlations](#5.5)
-  -[5.6 Time to fall asleep](#5.6)
+  - [5.1 Device usage](#5.1)
+  - [5.2 Calories vs Sleeps vs Steps](#5.2)
+  - [5.3 Active level](#5.3)
+  - [5.4 Intensity in a day](#5.4)
+  - [5.5 Correlations](#5.5)
+  - [5.6 Time to fall asleep](#5.6)
 - [6. Act](#6)
 
 
@@ -118,8 +118,14 @@ For some reason, there is a part of date format over 18 files are string, which 
 
 <a name="4.2.2"></a>
 ### 4.2.2 Duplicates handelling
+
+https://github.com/Heatescape/PortfolioProjects/blob/f3afdfc4e73f5c01e14548338315a867b9ab821b/Bellabeat/SQL/cleaning.sql#L6-L23
+
+https://github.com/Heatescape/PortfolioProjects/blob/f3afdfc4e73f5c01e14548338315a867b9ab821b/Bellabeat/SQL/cleaning.sql#L30-L51
+
 In this case study, I considered that a file has more than 1 record when the id and datetime is the same is duplicated. There are 2 files with duplicates. The first one is minuteSleep_merged file, user id 4702921684's information has been collected twice, this may because that this user have two deviced that record he/her stats at the same time. Hence, we created a new file minuteSleep_new_merged which maintain only non-duplicate record. The second file is sleepDay_merged, there are three records has been showns twice in the dataset, I filtered them out by creating a new file sleepDay_merged.
-<br />
+
+https://github.com/Heatescape/PortfolioProjects/blob/f3afdfc4e73f5c01e14548338315a867b9ab821b/Bellabeat/SQL/cleaning.sql#L66-L67
 
 There are two columns in dailyActivity_merged dataset, TotalDistance and TrackerDistance. According to the fitabase data dictionary, TotalDistance is the total kilometres tracked (assume this is provide by the user's non-fitbit device, e.g. phone), TrackerDistance is the total kilometres tracked by Fitbit device. By checking the repeatability of these two column, there are only three record that have different value of TotalDistance and TrackerDistance, and the TotalDistance are always greater than the TrackerDistance. At the end, I droped the TotalDistance columns for a more compact dataset.
 
@@ -140,6 +146,8 @@ heartrate_seconds_merged dataset with three attribute: id, date (accurate to the
 <a name="5.1"></a>
 ## 5.1 Device usage
 
+https://github.com/Heatescape/PortfolioProjects/blob/a94da3f759e33764c3d7379846208f4a1afc2fb4/Bellabeat/SQL/analyse.sql#L56-L70
+
 Dataset for this case study are collected from consumers of FitBit. Hence, it is important to know the device usage of consumers.
 
 ![plot](./img/usage.PNG)
@@ -149,12 +157,16 @@ As the image shows, consumers are more likely to trede their smart device as a s
 <a name="5.2"></a>
 ## 5.2 Calories vs Sleeps vs Steps
 
+https://github.com/Heatescape/PortfolioProjects/blob/a94da3f759e33764c3d7379846208f4a1afc2fb4/Bellabeat/SQL/analyse.sql#L46-L54
+
 ![plot](./img/csi.PNG)
 
 This image shows there is a slightly negative relation between daily steps and time asleep, calories and steps has a positive relation, and there is no relation between sleep and calories. Each colour represents each consumers.
 
 <a name="5.3"></a>
 ## 5.3 Active level
+
+https://github.com/Heatescape/PortfolioProjects/blob/a94da3f759e33764c3d7379846208f4a1afc2fb4/Bellabeat/SQL/analyse.sql#L9-L11
 
 ![plot](./img/activeLevel.PNG)
 
@@ -169,6 +181,8 @@ As the bar chart shows, consumers have more intensity at 10AM, 5~7PM than other 
 
 <a name="5.5"></a>
 ## 5.5 Correlations
+
+https://github.com/Heatescape/PortfolioProjects/blob/a94da3f759e33764c3d7379846208f4a1afc2fb4/Bellabeat/SQL/analyse.sql#L22-L27
 
 ![plot](./img/heatmap.png)
 

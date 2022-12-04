@@ -1,10 +1,23 @@
 ## Table of Content
-- Summary
-- Ask
-- Prepare
-- Process
-- Analyse and share
-- Act
+- [1. Summary]
+- [2. Ask]
+- [3. Prepare]
+  -[3.1 Dataset used]
+  -[3.2 Accessibility and privacy of data]
+  -[3.3 Information about dataset]
+  -[3.4 Data Organizasion and verification]
+  -[3.5 Data credibility and intergrity]
+- [4. Process]
+  -[4.1 Import dataset]
+  -[4.2 Cleaning and formatting]
+    -[4.2.1 Date formatting]
+    -[4.2.2 Duplicates handelling]
+    -[4.2.3 Removing nessesery data]
+    -[4.2.4 Heart Rate dataset]
+- [5. Analyse and share]
+- [6. Act]
+
+
 <br />
 
 # 1. Summary 🎈
@@ -33,7 +46,7 @@ Leaf is Bellabeat's classic wellness tracker can be worn as a bracelet, necklace
 ## 3.1 Dataset used
 The dataset used for this case study is FitBit Fitness Tracker Data from Mobius on Kaggle.
 
-## 3.2 Accessibility and privacy of data:
+## 3.2 Accessibility and privacy of data
 We can determine from the source website of the data, that this is an open source dataset. Under copyright law, we can copy, modify, distribute and perform works, even for commercial purposes, without asking permission. Provided the owner waives all his or her worldwide rights to the work to the extent permitted by law, thereby placing the work in the field of publication.
 
 ## 3.3 Information about dataset
@@ -95,16 +108,58 @@ heartrate_seconds_merged dataset with three attribute: id, date (accurate to the
 - Able to combine with other dataset easily.
 <br />
 
-# 5. Analyse 🔮
+# 5. Analyse and share🔮
+## 5.1 Device usage
 
+Dataset for this case study are collected from consumers of FitBit. Hence, it is important to know the device usage of consumers.
 
+![plot](./img/usage.PNG)
 
+As the image shows, consumers are more likely to trede their smart device as a step recording device. Amount 33 users, there are 22 users used the device to record their steps, but only 3 user checked their sleep everyday (median at 20.5).
 
+## 5.2 Calories vs Sleeps vs Steps
 
+![plot](./img/csi.PNG)
 
+This image shows there is a slightly negative relation between daily steps and time asleep, calories and steps has a positive relation, and there is no relation between sleep and calories. Each colour represents each consumers.
 
+## 5.3 Active level
 
+![plot](./img/activeLevel.PNG)
 
+As the pie chart shows, users spend aproximately 1 thousand minutes, which is 16.6 hours, at sedentary on average. But only 21.2 minutes of exercise per day on average.
+
+## 5.4 Intensity in a day
+
+![plot](./img/dailyintensity.jpg)
+
+As the bar chart shows, consumers have more intensity at 10AM, 5~7PM than other time in a day.
+
+## 5.5 Correlations
+
+![plot](./img/heatmap.png)
+
+This heatmap shows the correlations between each feature of consumers.
+
+## 5.6 Time to fall asleep
+
+![plot](./img/stepvstfs.PNG)
+
+In this image, each colour represents each consumers. As we can see, some of the users take above an hour to fall asleep. Under normal circumstances, it takes more than 15 minutes for a person to fall asleep. 
+
+# 6. Act
+
+Firstly, I would highly recommend Bellabeat to collect there own data for analysing no matter from the app or other sport device. Each company has their own characteristics. As a company which focus on women health, we need to show more about our focus. 
+
+Recommendations:
+
+1. Create an interactive system between users, such as adding friends and viewing friends' steps and schedules. Because people often want to show their better side in everyone's field of vision.
+
+2. Afterwards, a reward mechanism can be introduced to encourage users to record their daily sleep conditions, such as when to go to bed or when to get up, to help users develop good work and rest habits. The way of reward can be a voucher for purchasing Bellabeat products, or an analysis report from a health expert.
+
+3. Through the observation of the time to fall asleep, we found that some users will not fall asleep until several hours later, we speculate that the users may be watching TV or playing with mobile phones before going to bed. This strong message keeps our brains active, making it harder to fall asleep and affecting how we feel the next day. So the Bellabeat team can send a silent push on the phone when it detects that the user is in bed at night but hasn't fallen asleep for half an hour: "Dear xxx, it's time to go to bed."
+
+4. When the user is detected to be sitting for a long time, the vibrating leaf reminds the user to stand up and move around.
 
 
 

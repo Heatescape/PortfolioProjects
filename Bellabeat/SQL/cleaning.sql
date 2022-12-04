@@ -6,8 +6,8 @@ and date = '2016-05-07 01:24:00.000'
 select *
 from Bellabeat..minuteSleep_new_merged$
 order by 1,2
---group by id, Date
---having count(*) > 1
+group by id, Date
+having count(*) > 1
 
 -- create a table for minute sleep without duplicate
 create table Bellabeat..minuteSleep_new_merged$
